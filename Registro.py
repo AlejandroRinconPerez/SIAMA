@@ -19,7 +19,7 @@ def Reporte_Residual():
     
     
     
-Reporte_Residual()
+
     
     
     
