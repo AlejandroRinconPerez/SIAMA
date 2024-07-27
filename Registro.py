@@ -1,11 +1,6 @@
 from Datos import *
 
 
-
-
-
-
-
 def ingreso_Muestra():
     cargar_datos(Ruta_JSON_Resultados_Residual,Residual)
     print("Recuerde que el codigo de muestrra no puede tener infop ligada al cliente")
@@ -27,22 +22,89 @@ def ingreso_Variables():
                         3. Solidos
                         4. Nitrogeno Kendal
                         5. Nitratos
-                        6. Nitritos
-                        7.Metales
-                        8. Fosfatos
-                        9.Salir
+                        6. Fosfatos
+                        7. Metales
+                        8. Nitritos
+                        9. Salir
                         """)
     print(Menu_Variables)
-    Cantidad_Variables = int(input("Inrese la cantidad de Variables"))
-    for i in range(Cantidad_Variables):
+    while True:
         ingreso_Variables = int(input('Ingrese el numero de Variable Por ejemplo 1 Para DBO:  '))
         if ingreso_Variables == 1:
             if Residual[Codigo_Muestra].get("DB0",None) ==None:
                 Residual[Codigo_Muestra]["DB0"]={}
                 guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
             else:
+                print("*"*20)
                 print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
                 continue
+        if ingreso_Variables == 2:
+            if Residual[Codigo_Muestra].get("DQ0",None) ==None:
+                Residual[Codigo_Muestra]["DQ0"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("*"*20)
+                print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
+                continue
+        if ingreso_Variables == 3:
+            if Residual[Codigo_Muestra].get("Solidos",None) ==None:
+                Residual[Codigo_Muestra]["Solidos"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("*"*20)
+                print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
+                continue
+        if ingreso_Variables == 4:
+            if Residual[Codigo_Muestra].get("Nitrogeno Kendal",None) ==None:
+                Residual[Codigo_Muestra]["Nitrogeno Kendal"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("*"*20)
+                print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
+                continue
+        if ingreso_Variables == 5:
+            if Residual[Codigo_Muestra].get("Nitratos",None) ==None:
+                Residual[Codigo_Muestra]["Nitratos"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("*"*20)
+                print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
+                continue
+        if ingreso_Variables == 6:
+            if Residual[Codigo_Muestra].get("Metales",None) ==None:
+                Residual[Codigo_Muestra]["Metales"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("*"*20)
+                print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
+                continue
+        if ingreso_Variables == 7:
+            if Residual[Codigo_Muestra].get("Fosfatos",None) ==None:
+                Residual[Codigo_Muestra]["Fosfatos"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("*"*20)
+                print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
+                continue
+        if ingreso_Variables == 8:
+            if Residual[Codigo_Muestra].get("Nitritos",None) ==None:
+                Residual[Codigo_Muestra]["Nitritos"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("*"*20)
+                print("Variable ya Registrada No puede sobre escribri")
+                print("*"*20)
+                continue
+        if ingreso_Variables == 9:
+            break
+                
             
                 
                 
