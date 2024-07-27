@@ -2,6 +2,72 @@ from Datos import *
 
 
 
+
+
+
+
+def ingreso_Muestra():
+    cargar_datos(Ruta_JSON_Resultados_Residual,Residual)
+    print("Recuerde que el codigo de muestrra no puede tener infop ligada al cliente")
+    Codigo_Muestra = (input("Ingrese el Codigo de muestra"))
+    Residual[Codigo_Muestra]={}
+    guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+    return
+
+def ingreso_Variables():
+    cargar_datos(Ruta_JSON_Resultados_Residual,Residual)
+    Codigo_Muestra = (input("Ingrese el Codigo de muestra"))
+    if Codigo_Muestra not in Residual:
+        print("Codigo de Variable no Registrado")
+        return
+    print("Cada muestra tiene X cantidad de Variables indique cunatas Variables va ingresar")
+    Menu_Variables = ("""
+                        1. DBO
+                        2. DQO 
+                        3. Solidos
+                        4. Nitrogeno Kendal
+                        5. Nitratos
+                        6. Nitritos
+                        7.Metales
+                        8. Fosfatos
+                        9.Salir
+                        """)
+    print(Menu_Variables)
+    Cantidad_Variables = int(input("Inrese la cantidad de Variables"))
+    for i in range(Cantidad_Variables):
+        ingreso_Variables = int(input('Ingrese el numero de Variable Por ejemplo 1 Para DBO:  '))
+        if ingreso_Variables == 1:
+            if Residual[Codigo_Muestra].get("DB0",None) ==None:
+                Residual[Codigo_Muestra]["DB0"]={}
+                guardar_datos(Ruta_JSON_Resultados_Residual,Residual)
+            else:
+                print("Variable ya Registrada No puede sobre escribri")
+                continue
+            
+                
+                
+            
+       
+            
+            
+            
+            
+            
+        
+        
+        
+    
+        
+    
+        
+
+ingreso_Variables()
+    
+
+
+
+
+
 def Reporte_Residual():
     cargar_datos(Ruta_JSON_Resultados_Residual,Residual)
     
